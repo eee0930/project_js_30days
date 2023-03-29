@@ -8,6 +8,25 @@
 </head>
 <body>
 <script>
+  let pressed = [];
+  const secretCode = "hwayeon";
+
+  window.addEventListener("keyup", (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if(pressed.join("").includes(secretCode)) {
+      console.log("DING DING!");
+      cornify_add();
+    }
+    console.log(pressed);
+  });
+
+  // tbd...
+  // Cross-Origin Read Blocking (CORB) blocked cross-origin 
+  // response https://www.cornify.com/getacorn.php?r=1680074031175&url=file:///Users/songhwayeon/Documents/project_js_30days/key_sequence_detection/index.html 
+  // with MIME type image/gif. 
+  // See https://www.chromestatus.com/feature/5629709824032768 for more details.
 </script>
 </body>
 </html>
