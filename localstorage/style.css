@@ -38,35 +38,38 @@ h2 {
   font-weight: 200;
 }
 
-.plates {
+.plates, .checkall {
   margin: 0;
   padding: 0;
   text-align: left;
   list-style: none;
 }
 
-.plates li {
+.plates li, .checkall li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
 }
+.checkall li {
+  border-bottom: none;
+}
 
-.plates label {
+.plates label, .checkall label {
   flex: 1;
   cursor: pointer;
 }
 
-.plates input {
+.plates input, .checkall input {
   display: none;
 }
 
-.plates input + label:before {
+.plates input + label:before, .checkall input + label:before {
   content: "⬜️";
   margin-right: 10px;
 }
 
-.plates input:checked + label:before {
+.plates input:checked + label:before, .checkall input:checked + label:before {
   content: "🌮";
 }
 
